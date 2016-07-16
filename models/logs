@@ -1,0 +1,10 @@
+CREATE TABLE conditions (id serial,condition varchar(256) UNIQUE NOT NULL)
+CREATE TABLE playground (
+    id serial,
+    cons_id varchar (10) NOT NULL,
+    condition number[] NOT NULL,
+    doctor_id integer,
+    user_rating smallint
+);
+CREATE INDEX idx_users ON users USING GIN(groups);
+psql -d justDoc	//connect to DB
